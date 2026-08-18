@@ -1,26 +1,268 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Blog Pássaros</title>
+  
+  <!-- Fonte Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7f4;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, #2e7d32, #4caf50);
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    /* Área Principal organizada em coluna */
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    /* Card do Post */
+    article {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 24px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    article:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    article img {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 3px solid #4caf50;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    article h2 {
+      font-size: 1.5rem;
+      color: #1b5e20;
+      margin-bottom: 6px;
+    }
+
+    .artigo-autor {
+      font-size: 0.85rem;
+      color: #666;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    article p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+
+    .lista-curiosidades {
+      text-align: left;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: #4a5568;
+      font-size: 0.95rem;
+    }
+
+    .lista-curiosidades li {
+      margin-bottom: 10px;
+    }
+
+    /* Botões de Ação */
+    .acoes {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: auto;
+    }
+
+    button {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #dcfce7;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    button.ativo-like {
+      background-color: #2e7d32;
+      color: #ffffff;
+      border-color: #1b5e20;
+    }
+
+    button.ativo-dislike {
+      background-color: #c62828;
+      color: #ffffff;
+      border-color: #8e0000;
+    }
+  </style>
+</head>
+
 <body>
 
   <header>
-    <h1>Meu blog passaros</h1>
+    <h1>Meu Blog Pássaros</h1>
     <h2>Conhecendo as maritacas e os papagaios</h2>
   </header>
 
   <main>
-      
+    <!-- Post 1 -->
+    <article>
+      <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQ5JkfQdnKIPtFEz9vt20QcU4KSFHITPdFvL78GTJkzjojgYESwjkvoOI17nCOZbXYE2tK6U3HO98WwL3w" alt="Maritaca verde em um galho">
       <div>
         <h2>Meu primeiro post</h2>
-        <p class="artigo-autor">Por: Marcelo belinato filho</p>
-        <p>Boas-vindas ao meu blog, aqui irei falar sobre a vida das maritacas e papagaios e algumas curiosidades sobre eles.</p>
-        <button>🦜​ <span0></span0></button>
-        <button>👎🏻​ <span0></span0></button>
+        <p class="artigo-autor">Por: Marcelo Belinato Filho</p>
+        <p>Boas-vindas ao meu blog! Aqui irei falar sobre a vida das maritacas e papagaios e compartilhar algumas curiosidades sobre eles.</p>
+      </div>
+      <div class="acoes">
+        <button type="button" class="btn-like">🦜 <span class="count-like">0</span></button>
+        <button type="button" class="btn-dislike">👎🏻 <span class="count-dislike">0</span></button>
+      </div>
+    </article>
+
+    <!-- Post 2: Curiosidades -->
+    <article>
+      <img src="https://images.unsplash.com/photo-1516641396056-0ce60a85d49f?q=80&w=800&auto=format&fit=crop" alt="Bando de pássaros voando no céu">
+      <div>
+        <h2>5 Curiosidades Sobre Maritacas</h2>
+        <p class="artigo-autor">Por: Marcelo Belinato Filho</p>
+        <ul class="lista-curiosidades">
+          <li><strong>Vozes marcantes:</strong> São conhecidas pelo som alto e estridente quando voam em bandos.</li>
+          <li><strong>Fidelidade ao par:</strong> Formam casais para a vida toda e andam quase sempre juntas.</li>
+          <li><strong>Alimentação:</strong> Adoram sementes, frutas e até flores nativas da fauna brasileira.</li>
+          <li><strong>Inteligência:</strong> Conseguem aprender pequenos truques e têm ótima memória visual.</li>
+          <li><strong>Sociáveis:</strong> Vivem em grandes colônias e comunicam-se constantemente entre si.</li>
+        </ul>
+      </div>
+      <div class="acoes">
+        <button type="button" class="btn-like">🦜 <span class="count-like">0</span></button>
+        <button type="button" class="btn-dislike">👎🏻 <span class="count-dislike">0</span></button>
       </div>
     </article>
   </main>
+
+  <script>
+    // Aplica a lógica de votação independente para cada card de post
+    document.querySelectorAll('article').forEach(artigo => {
+      const btnLike = artigo.querySelector('.btn-like');
+      const btnDislike = artigo.querySelector('.btn-dislike');
+      const countLike = artigo.querySelector('.count-like');
+      const countDislike = artigo.querySelector('.count-dislike');
+
+      let likes = 0;
+      let dislikes = 0;
+      let userVote = null;
+
+      btnLike.addEventListener('click', () => {
+        if (userVote === 'like') {
+          likes--;
+          userVote = null;
+          btnLike.classList.remove('ativo-like');
+        } else {
+          if (userVote === 'dislike') {
+            dislikes--;
+            btnDislike.classList.remove('ativo-dislike');
+          }
+          likes++;
+          userVote = 'like';
+          btnLike.classList.add('ativo-like');
+        }
+        atualizar();
+      });
+
+      btnDislike.addEventListener('click', () => {
+        if (userVote === 'dislike') {
+          dislikes--;
+          userVote = null;
+          btnDislike.classList.remove('ativo-dislike');
+        } else {
+          if (userVote === 'like') {
+            likes--;
+            btnLike.classList.remove('ativo-like');
+          }
+          dislikes++;
+          userVote = 'dislike';
+          btnDislike.classList.add('ativo-dislike');
+        }
+        atualizar();
+      });
+
+      function atualizar() {
+        countLike.textContent = likes;
+        countDislike.textContent = dislikes;
+      }
+    });
+  </script>
 
 </body>
 
